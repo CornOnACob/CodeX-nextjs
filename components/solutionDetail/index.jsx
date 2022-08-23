@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AppContext } from '../../pages/sandbox/context';
+import { AppContext } from '../../context';
 import styles from './styles.module.css';
 import CodeMirror from '@uiw/react-codemirror';
 import { dracula } from '@uiw/codemirror-theme-dracula';
@@ -21,7 +21,7 @@ export function SolutionDetail () {
     formattedUserCode = userSolution.solution.replaceAll('  ', '\n');
     explanation = userSolution.explanation;
     title = userSolution.title;
-    formattedDate = moment(userSolution.createdAt).format('MMMM Do YYYY, h:mm:ss');
+    formattedDate = moment(userSolution.createdAt).format('MMMM Do YYYY, h:mm:ss a');
   }
 
   return(
@@ -42,22 +42,26 @@ export function SolutionDetail () {
             height="200px"
             theme={dracula}
             extensions={[javascript({jsx:true})]}
+            editable={false}
+            autoFocus={false}
           />
         }
 
         {userSolution &&
           <>
             <h4 style={{marginTop:'2vh'}}>{title}</h4>
-            <span style={{color:'lightgray', fontSize:'12px'}}>shared on {formattedDate} by {userSolution.userId ? userSolution.userId : `Anonymous User`}</span> 
+            <span className={styles.date}>shared on {formattedDate} by {userSolution.userId ? userSolution.userId : `Anonymous User`}</span> 
             <h4 style={{marginTop:'4vh'}}>Explanation</h4>
-            <span style={{color:'lightgray', fontSize:'15px'}}>{explanation.length > 1 ? explanation : `No explanation was provided.`}</span>
+            <span style={{color:'lightgray'}}>{explanation.length > 1 ? explanation : `No explanation was provided.`}</span>
             <h4 style={{marginTop:'4vh'}}>Code</h4>
             <CodeMirror
               value={formattedUserCode}
               height="200px"
               theme={dracula}
               extensions={[javascript({jsx:true})]}
-            />
+              editable={false}
+              autoFocus={false}
+            />            
           </>
         }
 

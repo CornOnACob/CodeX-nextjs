@@ -2,7 +2,58 @@ html,
 body {
   padding: 0;
   margin: 0;
+  --spinner:5rem;
+  --rs-xxl:30em;
+  --fs-xl: 4.5rem;
+  --fs-600: 2.5rem;
+  --fs-400: 1.4rem;
+  --fs-100: 1.15rem;
+  --fs-50: 1rem;
+  --fs-20: 0.9rem;
+  --fs-date: 0.8rem
+}
 
+@media (max-width: 1700px) {
+  body {
+  --rs-xxl:20em;
+  --fs-xl: 4.1rem;
+  --fs-600: 2.1rem;
+  --fs-400: 1.2rem;
+  --fs-100: 0.9rem;
+  --fs-50: 0.8rem;
+  --fs-20: 0.7rem;
+  --fs-date: 0.6rem
+  }
+}
+
+@media (min-width:2000px) {
+  body {
+    --spinner:7rem;
+    --rs-xxl: 40em;
+    --fs-xl: 6rem;
+    --fs-600: 3rem;
+    --fs-400: 2.2rem;
+    --fs-100: 1.58rem;
+    --fs-50: 1.5rem;
+    --fs-20: 1.1rem;
+    --fs-date: 1rem
+  }
+  
+}
+
+@media (min-width:2400px) {
+  body {
+    --spinner:11rem;
+    --rs-xxl: 50em;
+    --fs-xl: 10rem;
+    --fs-600: 5rem;
+    --fs-400: 3.5rem;
+    --fs-100: 2.2rem;
+    --fs-50: 2rem;
+    --fs-20: 1.8rem;
+    --fs-date: 1.6rem
+  }
+  
 }
 
 a {
@@ -22,6 +73,7 @@ a:hover{
   height: 100% !important;
   width: 100% !important;
 }
+
 
 .ͼ15 {
   height: 95% !important;
@@ -61,3 +113,12 @@ a:hover{
   background-clip: content-box;
   background-color: #8a8a94;
 } 
+
+span {
+  font-size: var(--fs-50);
+}
+
+h4 {
+  font-size: var(--fs-400);
+  font-weight: bold;
+}

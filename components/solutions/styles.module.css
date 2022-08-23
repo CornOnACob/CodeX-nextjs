@@ -11,7 +11,7 @@
 
 .container::-webkit-scrollbar {
   width: 12px;
-  height: 20px;
+  min-height: 20px;
 }
 
 .container::-webkit-scrollbar-track {
@@ -31,7 +31,7 @@
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 14px;
+  font-size: var(--fs-50);;
   font-family: 'Open Sans';
   font-weight: bold;
   padding: 5px 10px;
@@ -48,7 +48,7 @@
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 14px;
+  font-size: var(--fs-50);;
   font-family: 'Open Sans';
   font-weight: bold;
   padding: 5px 10px;

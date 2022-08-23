@@ -4,16 +4,20 @@
   flex-direction: column;
   color: white;
   font-family: 'Open Sans';
-  font-size: 14px;
+  font-size: var(--fs-50);;
   margin: 10px 0px;
   padding: 15px;
   border:none;
   border-radius: 5px;
-  height: 9vh;
+  max-height: 9em;
   cursor: pointer;
-  /* height: 15%; */
 }
 
 .container:hover {
   background-color: #4952a3;
+}
+
+.date {
+  color: lightgray ;
+  font-size: var(--fs-date)
 }
