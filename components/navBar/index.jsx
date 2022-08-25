@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { useUser } from '@auth0/nextjs-auth0';
 
 export function NavBar () {
-
+  
   const { user } = useUser();
-
+  
   return(
     <div className={styles.container}>
       <Link href="/">
